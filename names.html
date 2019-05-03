@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Names:</h1>
+	</div>
+	<div>
+		<section>
+			<label>First Name:</label><input type="text" name="fName" id="firstName"/>
+			<label>last Name:</label><input type="text" name="fName" id="lastName"/>
+			<input type="button" name="btn" id="button" onclick="add()" value="Add Name"/>
+			<ul id="result">
+			</ul>
+
+		</section>
+	</div>
+	<script>
+		function $(key){
+			return document.getElementById(key);
+		}
+		function add(){
+			var string = $("firstName").value + " " + $("lastName").value;
+			var ul = document.querySelector("ul");
+			var li = document.createElement("li");
+			li.appendChild(document.createTextNode(string));
+			ul.appendChild(li);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+      table tr th{
+      	color:black;
+      }
+	</style>
+</head>
+<body>
+	<div>
+		<header>
+			<h1>Numbers</h1>
+		</header>
+		<section>
+			<div>
+				<form>
+					<div>
+							<label>Upper Bound</label>
+							<input type="text" id="numOne" name="valOne" /><br>
+							<p>
+								<label>All</label>
+								<input type="radio" id="all" name="math"/><br>
+							</p>
+							<p>
+								<label>Evens</label>
+								<input type="radio" id="even" name="math"/><br>
+							</p>
+							<p>
+									<label>Odds</label>
+									<input type="radio" id="odd" name="math"/><br>
+							</p>
+								<label>Result</label>
+							<input type="button" name="Sumbit" value="Submit" onclick="javascript:solve_math()"/>
+							<div id="result"></div>
+	
+				</form>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+		function $(key){
+			return document.getElementById(key);
+		}
+		function reset(){
+			$("result").innerHTML = '';
+		}
+		function solve_math()
+			{
+				var counter;
+				if(!NaN)
+				{
+					var operator = document.getElementsByName("math");
+					var numOne = parseInt($("numOne").value);
+					if(operator[0].checked==true){
+						for(counter = 1;counter<=numOne;counter++){
+							$("result").innerHTML +="<li>" +counter+"</li>";			
+						}
+						
+					}
+	
+					else if(operator[1].checked==true){
+							for(counter = 1;counter<=numOne;counter++){
+								var result = counter % 2 
+								if(result==0)
+								{
+									$("result").innerHTML +="<li>" +counter+"</li>";
+								}			
+							}	
+					}
+					else if(operator[2].checked==true){
+							for(counter = 1;counter<=numOne;counter++){
+								var result = counter % 2 
+								if(result!=0)
+								{
+									$("result").innerHTML +="<li>" +counter+"</li>";
+								}			
+							}	
+					}
+	
+	
+				}
+			}
+		</script>
+</body>
+</html>

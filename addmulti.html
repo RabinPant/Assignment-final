@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<header>
+		<h1>AddMulti</h1>
+	</header>
+	<section>
+		<div>
+			<form>
+				<div>
+						<label>Num One	</label>
+						<input type="text" id="numOne" name="valOne" /><br>
+						<label>Num Two</label>
+						<input type="text" id="numTwo" name="valTwo" /><br>
+						<p>
+							<label>Addition</label>
+							<input type="radio" id="addition" name="math"/><br>
+						</p>
+						<p>
+							<label>Multiplication</label>
+							<input type="radio" id="multiplication" name="math"/><br>
+						</p>
+							<label>Result</label>
+						<input type="text" id="answer" name="answer" value=""/><br>
+						<input type="button" name="Sumbit" value="Submit" onclick="javascript:solve_math()"/>
+
+
+			</form>
+		</div>
+	</section>
+</div>
+<script type="text/javascript">
+	function $(key){
+		return document.getElementById(key);
+	}
+	function solve_math()
+		{
+			if(!NaN)
+			{
+				var operator = document.getElementsByName("math");
+				var numOne = parseInt($("numOne").value);
+				var numTwo = parseInt($("numTwo").value);
+
+			
+				if(operator[0].checked==true){
+					var result = numOne + numTwo;
+					$("answer").value = result;
+
+				}
+				else if(operator[1].checked==true){
+					var result = numOne * numTwo;
+					$("answer").value = result;
+
+				}
+
+
+			}
+		}
+</script>
+</body>
+</html>

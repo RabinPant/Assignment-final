@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<div>
+				<header>
+					<h1>Sums</h1>
+				</header>
+				<section>
+					<div>
+						<form>
+							<div>
+									<label>Upper Bound: </label>
+									<input type="text" id="numOne" name="valOne" /><br>
+									<p>
+											<label>Sum</label>
+											<input type="radio" id="addition" name="math"/><br>
+									</p>
+									<p>
+										<label>Sum Square</label>
+										<input type="radio" id="addition" name="math"/><br>
+									</p>
+									<p>
+										<label>Sum Cube</label>
+										<input type="radio" id="multiplication" name="math"/><br>
+									</p>
+										<label>Result</label>
+									<input type="text" id="answer" name="answer" value=""/><br>
+									<input type="button" name="Sumbit" value="Submit" onclick="javascript:solve_math()"/>
+			
+			
+						</form>
+					</div>
+				</section>
+			</div>
+			<script type="text/javascript">
+				function $(key){
+					return document.getElementById(key);
+				}
+				function solve_math()
+					{
+						if(!NaN)
+						{
+							var operator = document.getElementsByName("math");
+							var bound= parseInt($("numOne").value);
+							var counter;
+							var result=0;
+							if(numOne=='')
+							{
+								var msg = "Please Enter the Number";
+								$("answer").value = "msg";
+							}
+							if(operator[0].checked==true){
+								for(counter = 1;counter<=bound;counter++){
+									result = result + counter;
+								}
+								$("answer").value = Number(result);
+							}
+							else if(operator[1].checked==true){
+								$("answer").value = '';
+								for(counter = 1;counter<=bound;counter++){
+									result= result + Math.pow(counter,2);
+								}
+								$("answer").value = Number(result);
+							}
+							
+							else if(operator[2].checked==true){
+								for(counter = 1;counter<=bound;counter++){
+									result= result + Math.pow(counter,3);
+								}
+								$("answer").value = Number(result);
+							}
+			
+						}
+					}
+			</script>
+</body>
+</html>

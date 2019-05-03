@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>About me</title>
+	<link rel="shortcut icon" href="me.png" />
+	<style type="text/css">
+	a{
+		text-decoration:none;
+		color:white;
+	}
+	._header{
+		height:15%;
+		width:100%;
+		background-color: #f44336;
+	}
+	._body{
+		height:85%;
+		width:100%;
+		background-color: #f44336;
+	}
+	._topRight{
+		height:100%;
+		width:80%;
+		background-color: black;
+		float:right;
+	}
+	._topLeft{
+		height:100%;
+		width:20%;
+		
+		float:left;
+
+	}
+	._leftBody{
+		height:80%;
+		width:20%;
+		background-color: black;
+		float:left;
+	}
+	._rightBody{
+		height:100%;
+		width:80%;
+		background-color: #f44336;
+		float:right;
+	}
+	._buttonGroup{
+		height:80%;
+		width:50%;
+		margin:45px 65px 65px;
+	}
+	._buttonGroup input[type="submit"]{
+		margin:10px 10px 10px;
+		background-color: #f44336;
+		border:none;
+		height:50px;
+		width:90px;
+		font:Centaur;
+		font-size: 14px;
+		color:#FFFFFF;
+		border-radius:10px;
+		cursor: pointer;
+	}
+	._buttonGroup input[type="submit"]:hover{
+		background-color: red;
+	}
+	._footer{
+		height:20%;
+		width:100%;
+		background-color: black;
+	}
+	
+	</style>
+</head>
+<body>
+  <div class="_header">
+  	<div class="_topLeft">
+  		<img src="image.png" alt="ECU LOGO" height="100%" width="85%"/>
+  	</div>
+  	<div class="_topRight">
+       <h1 align ="center"></h1>
+  	</div>
+  </div>
+  <div class="_body">
+  	<div class="_leftBody">
+  		<div class="_buttonGroup">
+  		<a href="addmulti.html" target="frame"><input type="submit" value="addmulti"/></a>
+  		<a href="sums.html" target="frame"><input type="submit" value="Sums"/></a>
+  		<a href="names.html" target="frame"><input type="submit" value="My Name"/></a>
+  		<a href="palindrome.html" target="frame"><input type="submit" value="palindrome"/></a>
+  		<a href="numbers.html" target="frame"><input type="submit" value="numbers"/></a>
+  		</div>
+  		
+  	</div>
+  	<div class="_rightbody">
+  		<iframe name="frame" height="80%" width="99%" style="border:none;" scrolling="no">
+  		</iframe>
+  		<div class="_footer"></div>
+  	</div>
+  </div>
+</body>
+</html>

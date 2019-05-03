@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<h1>Palindrome</h1>
+	</div>
+		<div>
+				<section>
+					<label>Text:</label><input type="text" name="fName" id="txt"/>
+					<input type="button" name="btn" id="button" onclick="check()" value="check"/><br>
+					<label>result:</label><input id="result" type="text"/>
+				</section>
+			</div>
+
+<script type="text/javascript">
+	function isPlaindrome(str)
+	{
+			return str == str.split('').reverse().join('');
+	}
+	
+	function check()
+	{
+			var string = document.getElementById("txt").value;
+			if(isPlaindrome(string))
+			{
+				document.getElementById("result").value += "The string is Plaindrome";
+			}
+			else
+			{
+				document.getElementById("result").value += "Not a Plaindrome";
+			}
+	}
+</script>		
+					
+</body>
+</html>
